@@ -15,3 +15,4 @@ echo "{$a} X {$b} = {$multiplicacao}"."<br>";
 echo "{$a} / {$b} = {$divisao}"."<br>";
 echo "Resto de {$a} / {$b} = {$resto}"."<br>";
 echo "{$a} ** {$b} = {$exponencial}"."<br>";
+strle

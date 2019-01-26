@@ -3,9 +3,9 @@
 $nome = 'Juciellen';
 echo "<br>";
 echo 'Olá $nome!'; // não interpreta conteudo da variavel
-echo "<br>";
+echo "\n";
 echo "Olá $nome!"; // interpreta conteudo da variavel
-echo "<br>";
+echo '\n';
 echo "Olá ".$nome."!";
 
 // $soma =  "1 programador java" + "1 programador PHP";
