@@ -1,0 +1,6 @@
+.buildpath
+.info.php.swp
+.project
+.settings/
+deployment.properties
+deployment.xml
