@@ -1,5 +1,5 @@
 <?php
-// echo "<pre>";
+echo "<pre>";
 $dias = [
     'domingo',
     'segunda',

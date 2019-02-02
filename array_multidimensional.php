@@ -17,5 +17,5 @@ foreach ($alunos as $aluno){
     echo "<h5>{$aluno['id']} - {$aluno['nome']}";
 }
 
-// echo "<pre>";
-// print_r($alunos);
+echo "<pre>";
+print_r($alunos);

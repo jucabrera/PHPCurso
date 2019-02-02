@@ -1,8 +1,17 @@
 <?php
-$numero = 4;
-$resultado = 1;
-for($contador=$numero; $contador >=1; $contador--){
-    $resultado = $resultado * $contador;
+$valor = 5;
+
+
+//juciellen.cabrera@4linux.com.br
+
+
+function fatorial($numero){
+    $resultado = 1;
+    for($contador=$numero; $contador >=1; $contador--){
+        $resultado = $resultado * $contador;
+    }
+    return $resultado;   
 }
 
-echo "O fatorial de $numero é $resultado";
+$fatorial = fatorial($valor);
+echo "O fatorial de $valor é $fatorial";
