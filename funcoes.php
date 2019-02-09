@@ -24,7 +24,7 @@ function calcularTotal($preco, $quantidade=1){
     $resultado = $preco * $quantidade;
     echo "$preco * $quantidade = $resultado";
     return $resultado;
-    echo "fhdshvjksdfhkaskjfhdkjdhgjdshg";
+//     echo "fhdshvjksdfhkaskjfhdkjdhgjdshg";
 }
 
 function parOuImpar($numero)
