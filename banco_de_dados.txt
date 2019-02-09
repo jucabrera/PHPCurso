@@ -1,0 +1,21 @@
+sudo /etc/init.d/postgresql start<br>";
+sudo /etc/init.d/mysql start";
+
+Comandos PostgreSQL
+
+\d listar tabelas
+\l listar banco de dados
+\d usuarios ver estrutura da tabela
+
+create database curso500 owner developer
+create table usuarios (id serial, nome varchar not null, email varchar not null, senha varchar not null, foto varchar);
+
+
+SELECT * FROM usuarios;
+INSERT INTO usuarios (nome, email, senha)  VALUES ('Juciellen Cabrera', 'juciellen.cabrera@4linux.com.br1', '12356');
+SELECT * FROM usuarios WHERE id = 1;
+SELECT * FROM usuarios WHERE senha = '123456';
+SELECT * FROM usuarios WHERE email is not null;
+SELECT * FROM usuarios WHERE email is not null AND email like '%@gmail%'
+UPDATE usuarios SET email='maria@gmail.com' WHERE id = 2;
+DELETE FROM usuarios WHERE id = 2;
