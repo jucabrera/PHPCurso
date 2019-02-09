@@ -1,6 +1,7 @@
 <?php
 require_once "bootstrap.html";
 require "funcoes/funcoes-form.php";
+require_once 'funcoes/db.php';
 
 define('NOME_APLICACAO','Turma-500');
 
@@ -9,16 +10,16 @@ $email = '';
 
 if ($_POST) {
 
-    filtrarCampos();
-    validarCampos();
+    filtrarCampos();    
     
     $nome = ($_POST['nome']) ?? '';
     $email = ($_POST['email']) ?? '';
-    $senha = ($_POST['senha']) ?? '';
-    $senhaConfirmacao = ($_POST['senha-confirmacao']) ?? '';
-        
-    validarSenha();
-    validarArquivoEnviado();
+    $senha = ($_POST['senha']) ?? '';    
+    
+    if(validarCampos() and validarSenha() and validarArquivoEnviado()){
+        inserirUsuario($nome, $email, $senha);
+    }
+    
 
 }
 

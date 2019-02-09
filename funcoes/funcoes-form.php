@@ -22,11 +22,16 @@ function validarArquivoEnviado()
     if ($_FILES['foto']['error'] == UPLOAD_ERR_NO_FILE) {
         $mensagem = "Foto é um campo obrigatório";
         exibirErro($mensagem);
+        return false;
     }
+    return true;
 }
 
 function validarSenha()
 {
+    $senha = ($_POST['senha']) ?? '';
+    $senhaConfirmacao = ($_POST['senha-confirmacao']) ?? '';
+    
     if ($senha != $senhaConfirmacao) {
         $mensagem = "Senhas são incompatíveis<br>";
         exibirErro($mensagem);
@@ -39,16 +44,16 @@ function validarSenha()
 function validarCampos()
 {
     $campos = array_keys($_POST);
-    $erro = false;
+    $valido = true;
     foreach ($campos as $campo) {
         if (empty($_POST[$campo])) {
             $mensagem = "$campo é um campo obrigatório";
             exibirErro($mensagem);
-            $erro = true;
+            $valido = false;
         }
     }
     
-    return $erro;
+    return $valido;
 }
 
 
