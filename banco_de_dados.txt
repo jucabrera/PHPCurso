@@ -3,12 +3,21 @@ sudo /etc/init.d/mysql start";
 
 Comandos PostgreSQL
 
+# acessar postgres
+psql
+
+# acesar database
+psql NOME_DO BANCO
+
+
 \d listar tabelas
 \l listar banco de dados
 \d usuarios ver estrutura da tabela
+\q sair
 
 create database curso500 owner developer
-create table usuarios (id serial, nome varchar not null, email varchar not null, senha varchar not null, foto varchar);
+create table usuarios (id serial, nome varchar not null, email varchar not null, 
+senha varchar not null, foto varchar);
 
 
 SELECT * FROM usuarios;

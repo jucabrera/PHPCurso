@@ -1,3 +1,4 @@
+config/db.config.local.php
 .buildpath
 .info.php.swp
 .project

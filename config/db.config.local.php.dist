@@ -1,0 +1,8 @@
+<?php
+return [
+    'user' => 'USER',
+    'password' => 'PWD',
+    'port' => 'PORT',
+    'database' => 'DATABASE',
+    'host' => 'LOCALHOST'
+];

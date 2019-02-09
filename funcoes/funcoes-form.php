@@ -39,12 +39,16 @@ function validarSenha()
 function validarCampos()
 {
     $campos = array_keys($_POST);
+    $erro = false;
     foreach ($campos as $campo) {
         if (empty($_POST[$campo])) {
             $mensagem = "$campo é um campo obrigatório";
             exibirErro($mensagem);
+            $erro = true;
         }
     }
+    
+    return $erro;
 }
 
 
