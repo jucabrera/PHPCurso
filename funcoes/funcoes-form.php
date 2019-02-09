@@ -16,9 +16,10 @@ function filtrarCampos()
 
 function validarArquivoEnviado()
 {
+//     echo __FUNCTION__;
     $foto = $_FILES['foto'];
     
-    if ($_FILES['foto']['error'] == 4) {
+    if ($_FILES['foto']['error'] == UPLOAD_ERR_NO_FILE) {
         $mensagem = "Foto é um campo obrigatório";
         exibirErro($mensagem);
     }

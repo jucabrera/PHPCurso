@@ -2,6 +2,8 @@
 require_once "bootstrap.html";
 require "funcoes/funcoes-form.php";
 
+define('NOME_APLICACAO','Turma-500');
+
 $nome = '';
 $email = '';
 
@@ -11,7 +13,7 @@ if ($_POST) {
     validarCampos();
     
     $nome = ($_POST['nome']) ?? '';
-    $email = ($_POST['email']) ??;
+    $email = ($_POST['email']) ?? '';
     $senha = ($_POST['senha']) ?? '';
     $senhaConfirmacao = ($_POST['senha-confirmacao']) ?? '';
         
@@ -20,7 +22,7 @@ if ($_POST) {
 
 }
 
-require "view/formulario-cadastro.html";
+require "view/formulario-cadastro.phtml";
 ?>
 
 
