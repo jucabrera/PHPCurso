@@ -30,6 +30,33 @@ function listarUsuarios()
     return $usuarios;
 }
 
+function excluirUsuario($id)
+{    
+    $conexao = conectar();
+    $sql = "DELETE FROM usuarios WHERE id = $id";
+    return pg_exec($conexao, $sql);
+}
+
+function buscarUsuario($id)
+{
+    $conexao = conectar();
+    $sql = "SELECT * FROM usuarios WHERE id = $id";
+    $result = pg_query($conexao,$sql);
+    $usuario = pg_fetch_assoc($result);
+    return $usuario;
+}
+
+function alterarUsuario($id, $nome, $email, $senha){
+    
+    $conexao = conectar();
+    $sql = "
+        UPDATE usuarios 
+        SET nome = '$nome', email = '$email', senha='senha'
+        WHERE 
+            id = $id
+    ";
+    return pg_exec($conexao, $sql);
+}
 
 
 

@@ -13,13 +13,13 @@
   </thead>
   <tbody>
 <?php 
-foreach ($usuarios as $usuario):
-?>  
-    <tr>
-      <th scope="row"><?=$usuario['id']?></th>
+foreach ($usuarios as $indice => $usuario):
+    $id = $usuario['id'];
+?>    <tr>
+      <th scope="row"><?=$indice +1?></th>
       <td><?=$usuario['nome']?></td>
       <td><?=$usuario['email']?></td>
-      <td>Editar | Excluir</td>
+      <td><a href="editar_usuario.php?id=<?=$id;?>" >Editar </a> | <a href="excluir_usuario.php?id=<?=$id;?>" >Excluir</a></td>
     </tr>   
 <?php 
 endforeach;

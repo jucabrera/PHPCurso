@@ -22,7 +22,7 @@ if ($_POST) {
     
 
 }
-
+$action = 'formulario_cadastro.php';
 require "view/formulario-cadastro.phtml";
 ?>
 
