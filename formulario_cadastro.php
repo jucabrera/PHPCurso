@@ -15,8 +15,8 @@ if ($_POST) {
     $nome = ($_POST['nome']) ?? '';
     $email = ($_POST['email']) ?? '';
     $senha = ($_POST['senha']) ?? '';    
-    
-    if(validarCampos() and validarSenha() and validarArquivoEnviado()){
+//     and validarArquivoEnviado()
+    if(validarCampos() and validarSenha() ){
         inserirUsuario($nome, $email, $senha);
     }
     

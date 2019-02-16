@@ -21,4 +21,35 @@ function inserirUsuario($nome, $email, $senha)
     }
 }
 
+function listarUsuarios()
+{
+    $conexao = conectar();
+    $sql = "SELECT * FROM usuarios ORDER BY nome";
+    $query = pg_query($conexao,$sql);
+    $usuarios = pg_fetch_all($query);
+    return $usuarios;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // inserirUsuario('José', 'jose@4linux.com.br', '111');
