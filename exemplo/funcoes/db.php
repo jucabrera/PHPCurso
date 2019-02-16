@@ -46,6 +46,14 @@ function buscarUsuario($id)
     return $usuario;
 }
 
+function buscarUsuarioPorEmail($email){
+    $conexao = conectar();
+    $sql = "SELECT * FROM usuarios WHERE email = '$email'";
+    $result = pg_query($conexao,$sql);
+    $usuario = pg_fetch_assoc($result);
+    return $usuario;
+}
+
 function alterarUsuario($id, $nome, $email, $senha){
     
     $conexao = conectar();

@@ -1,0 +1,22 @@
+<?php
+require 'funcoes/funcoes_usuario.php';
+$nomeUsuarioLogado = verificarAutenticacao();
+require_once "bootstrap.html";
+?>
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" href="index.php">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="formulario_cadastro.php">Cadastro</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="login.php">Login</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Usuario Logado: <?=($nomeUsuarioLogado) ?? '';?></a>
+  </li>
+   <li class="nav-item">
+    <a class="nav-link" href="sair.php">Sair</a>
+  </li>
+</ul>

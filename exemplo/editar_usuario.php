@@ -1,5 +1,5 @@
 <?php
-require_once "bootstrap.html";
+require 'view/menu.phtml';
 require 'funcoes/db.php';
 require 'funcoes/funcoes-form.php';
 
